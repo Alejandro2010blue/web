@@ -8,7 +8,7 @@ body {
     align-items: center;
     font-family: 'Segoe UI', sans-serif;
     /* Imagen de la ciudad */
-    background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1400') no-repeat center center fixed;
+    background: url('https://unsplash.com/es/fotos/horizonte-de-la-ciudad-durante-la-noche-x7clQSWhlfE') no-repeat center center fixed;
     background-size: cover;
     color: white;
 }
