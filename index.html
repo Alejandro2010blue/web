@@ -1,78 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Diego Salazar</title>
-    <style>
-        /* 1. Fondo con imagen borrosa */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Segoe UI', sans-serif;
-            /* Aquí ponemos la imagen de fondo */
-            background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1000') no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Capa de desenfoque sobre el fondo */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Capa oscura para que resalte el centro */
-            backdrop-filter: blur(8px); /* ESTO hace que la imagen se vea borrosa */
-            z-index: -1;
-        }
-
-        /* 2. El rectángulo negro transparente (La caja) */
-        .contenedor-principal {
-            background-color: rgba(0, 0, 0, 0.85); /* Negro casi sólido */
-            border: 2px solid #ffffff33; /* Un borde sutil */
-            padding: 50px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            max-width: 600px;
-            width: 90%;
-        }
-
-        h1 {
-            color: #fccf05; /* Tu color amarillo */
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        p {
-            color: white;
-            font-size: 1.2rem;
-            font-style: italic;
-            opacity: 0.8;
-        }
-
-        /* Estilo del botón */
-        .boton-moderno {
-            margin-top: 30px;
-            padding: 12px 30px;
-            background: #fccf05;
-            color: black;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .boton-moderno:hover {
-            transform: scale(1.1);
-            background: #ffdb33;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -87,22 +19,6 @@
         </button>
     </div>
 
-    <script>
-    const boton = document.getElementById('miBoton');
-    const caja = document.querySelector('.contenedor-principal');
-
-    boton.addEventListener('click', function() {
-        // Cambiamos el estilo de la caja dinámicamente
-        caja.style.borderColor = "#fccf05";
-        caja.style.boxShadow = "0 0 50px #fccf0555";
-        
-        // Cambiamos el texto del botón
-        boton.innerText = "¡Nivel Programador Activado!";
-        boton.style.background = "#fff";
-        
-        console.log("Efectos visuales aplicados con éxito.");
-    });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
