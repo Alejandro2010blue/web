@@ -31,7 +31,7 @@ body::before {
     padding: 40px;
     border-radius: 20px;
     text-align: center;
-    border: 2px solid rgba(252, 207, 5, 0.3); /* Borde amarillo suave */
+    border: 2px solid rgba(97, 5, 245, 0.3); /* Borde amarillo suave */
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     max-width: 500px;
     width: 90%;
