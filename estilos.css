@@ -1,80 +1,45 @@
-/* 1. Fondo de pantalla completa */
 body {
     margin: 0;
-    padding: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Segoe UI', sans-serif;
-    /* Imagen de la ciudad */
-   background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1400') no-repeat center center fixed;
+    /* Imagen directa de la ciudad */
+    background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
     background-size: cover;
-    color: white;
+    position: relative;
 }
 
-/* 2. Capa de desenfoque (Efecto Blur) */
+/* Capa de desenfoque para que el texto resalte */
 body::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Oscurece un poco más el fondo */
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(8px);
     z-index: 1;
 }
 
-/* 3. El rectángulo negro (Tu caja de perfil) */
 .contenedor-principal {
     position: relative;
-    z-index: 2; /* Para que esté por encima del desenfoque */
-    background-color: rgba(0, 0, 0, 0.85); /* Negro elegante */
+    z-index: 2; /* Para que el texto esté por encima del borroso */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 15px;
     text-align: center;
-    border: 2px solid rgba(97, 5, 245, 0.3); /* Borde amarillo suave */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
-    max-width: 500px;
-    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: white;
 }
 
-h1 {
-    color: #fccf05; /* Tu amarillo */
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-bottom: 30px;
-}
-
-/* 4. Botón Moderno */
+h1 { color: #fccf05; margin: 0; }
 .boton-moderno {
-    padding: 12px 30px;
+    margin-top: 20px;
+    padding: 10px 25px;
     background: #fccf05;
-    color: black;
     border: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.boton-moderno:hover {
-    transform: scale(1.1);
-    background: white;
-    box-shadow: 0 0 20px #fccf05;
-}
-/* Esto se activa solo en pantallas pequeñas (celulares) */
-@media (max-width: 600px) {
-    .contenedor-principal {
-        width: 95%;
-        padding: 30px 15px;
-    }
-    h1 {
-        font-size: 1.8rem;
-    }
+    font-weight: bold;
 }
