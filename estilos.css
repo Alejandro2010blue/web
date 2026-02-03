@@ -68,3 +68,13 @@ p {
     background: white;
     box-shadow: 0 0 20px #fccf05;
 }
+/* Esto se activa solo en pantallas pequeñas (celulares) */
+@media (max-width: 600px) {
+    .contenedor-principal {
+        width: 95%;
+        padding: 30px 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+}
