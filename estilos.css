@@ -1,1 +1,71 @@
-es
+/* Configuración general */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    /* Imagen de fondo de alta calidad */
+    background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1400') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+/* Efecto de desenfoque (Blur) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura */
+    backdrop-filter: blur(10px);    /* Intensidad del borroso */
+    z-index: -1;
+}
+
+/* El rectángulo negro con estilo "Glassmorphism" */
+.contenedor-principal {
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    max-width: 500px;
+    width: 85%;
+}
+
+h1 {
+    color: #fccf05;
+    font-size: 2.5rem;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Botón moderno */
+.boton-moderno {
+    padding: 15px 40px;
+    background: #fccf05;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton-moderno:hover {
+    transform: scale(1.1);
+    background: #ffffff;
+    box-shadow: 0 0 20px #fccf05;
+}
