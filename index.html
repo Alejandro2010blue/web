@@ -4,30 +4,52 @@
     <meta charset="UTF-8">
     <title>Mi Perfil de Programador</title>
     <style>
-    body {
-        background-color: #121212; /* Color de fondo oscuro */
-        color: #e0e0e0;           /* Color de texto gris claro */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: 40px auto;
-        padding: 20px;
-    }
-    h1 {
-        color: #fccf05; /* Un azul profesional para el título */
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 10px;
-    }
-    li {
-        margin-bottom: 10px;
-        list-style-type: "🚀 "; /* Cambiamos los puntos por cohetes */
-    }
-</style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center; /* Centramos todo para que se vea mejor */
+        }
+        h1 {
+            color: #fccf05;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        ul {
+            text-align: left; /* La lista se queda a la izquierda */
+            display: inline-block;
+        }
+        li {
+            margin-bottom: 10px;
+            list-style-type: "🚀 ";
+        }
+        /* ESTILO DEL BOTÓN MODERNO */
+        .boton-moderno {
+            padding: 12px 25px;
+            cursor: pointer;
+            background: #fccf05;
+            border: none;
+            font-weight: bold;
+            color: #121212;
+            border-radius: 30px;
+            transition: transform 0.2s, background 0.2s;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+        .boton-moderno:hover {
+            background: #ffdb33;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Hola, soy Diego salazar </h1>
+        <h1>Hola, soy Diego Salazar</h1>
         <p>Aprendiz de programador y futuro experto.</p>
     </header>
 
@@ -39,28 +61,17 @@
             <li>Aprender a pensar como programador</li>
         </ul>
     </section>
-<button id="miBoton" class="boton-moderno">
-    ¡Haz clic aquí!
-</button>
 
-<style>
-    /* Añade esto dentro de tus etiquetas <style> anteriores */
-    .boton-moderno {
-        padding: 12px 25px;
-        cursor: pointer;
-        background: #fccf05;
-        border: none;
-        font-weight: bold;
-        color: #121212;
-        border-radius: 30px; /* Bordes redondeados */
-        transition: transform 0.2s, background 0.2s; /* Animación suave */
-        font-size: 1rem;
-    }
+    <button id="miBoton" class="boton-moderno">
+        ¡Haz clic aquí!
+    </button>
 
-    .boton-moderno:hover {
-        background: #ffdb33; /* Color un poco más claro al pasar el ratón */
-        transform: scale(1.1); /* Se hace un poquito más grande */
-    }
-</style>
+    <script>
+        const boton = document.getElementById('miBoton');
+        boton.addEventListener('click', function() {
+            alert('¡Sigue así, Diego! Ya eres un programador con una web en vivo 🚀');
+        });
+    </script>
+
 </body>
 </html>
