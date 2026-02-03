@@ -39,18 +39,28 @@
             <li>Aprender a pensar como programador</li>
         </ul>
     </section>
-<button id="miBoton" style="padding: 10px 20px; cursor: pointer; background: #fccf05; border: none; font-weight: bold;">
+<button id="miBoton" class="boton-moderno">
     ¡Haz clic aquí!
 </button>
 
-<script>
-    // Seleccionamos el botón
-    const boton = document.getElementById('miBoton');
+<style>
+    /* Añade esto dentro de tus etiquetas <style> anteriores */
+    .boton-moderno {
+        padding: 12px 25px;
+        cursor: pointer;
+        background: #fccf05;
+        border: none;
+        font-weight: bold;
+        color: #121212;
+        border-radius: 30px; /* Bordes redondeados */
+        transition: transform 0.2s, background 0.2s; /* Animación suave */
+        font-size: 1rem;
+    }
 
-    // Le decimos qué hacer cuando reciba un clic
-    boton.addEventListener('click', function() {
-        alert('¡Sigue así, Diego! Ya eres un programador con una web en vivo 🚀');
-    });
-</script>
+    .boton-moderno:hover {
+        background: #ffdb33; /* Color un poco más claro al pasar el ratón */
+        transform: scale(1.1); /* Se hace un poquito más grande */
+    }
+</style>
 </body>
 </html>
