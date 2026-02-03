@@ -88,11 +88,21 @@
     </div>
 
     <script>
-        const boton = document.getElementById('miBoton');
-        boton.addEventListener('click', function() {
-            alert('¡Sigue así, Diego! Tu web se ve increíble ahora 🚀');
-        });
-    </script>
+    const boton = document.getElementById('miBoton');
+    const caja = document.querySelector('.contenedor-principal');
+
+    boton.addEventListener('click', function() {
+        // Cambiamos el estilo de la caja dinámicamente
+        caja.style.borderColor = "#fccf05";
+        caja.style.boxShadow = "0 0 50px #fccf0555";
+        
+        // Cambiamos el texto del botón
+        boton.innerText = "¡Nivel Programador Activado!";
+        boton.style.background = "#fff";
+        
+        console.log("Efectos visuales aplicados con éxito.");
+    });
+</script>
 
 </body>
 </html>
