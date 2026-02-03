@@ -1,75 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Perfil de Programador</title>
+    <title>Perfil de Diego Salazar</title>
     <style>
+        /* 1. Fondo con imagen borrosa */
         body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            text-align: center; /* Centramos todo para que se vea mejor */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            /* Aquí ponemos la imagen de fondo */
+            background: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=1000') no-repeat center center fixed;
+            background-size: cover;
         }
+
+        /* Capa de desenfoque sobre el fondo */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Capa oscura para que resalte el centro */
+            backdrop-filter: blur(8px); /* ESTO hace que la imagen se vea borrosa */
+            z-index: -1;
+        }
+
+        /* 2. El rectángulo negro transparente (La caja) */
+        .contenedor-principal {
+            background-color: rgba(0, 0, 0, 0.85); /* Negro casi sólido */
+            border: 2px solid #ffffff33; /* Un borde sutil */
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            max-width: 600px;
+            width: 90%;
+        }
+
         h1 {
-            color: #fccf05;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-        ul {
-            text-align: left; /* La lista se queda a la izquierda */
-            display: inline-block;
-        }
-        li {
+            color: #fccf05; /* Tu color amarillo */
+            font-size: 3rem;
             margin-bottom: 10px;
-            list-style-type: "🚀 ";
+            text-transform: uppercase;
         }
-        /* ESTILO DEL BOTÓN MODERNO */
+
+        p {
+            color: white;
+            font-size: 1.2rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Estilo del botón */
         .boton-moderno {
-            padding: 12px 25px;
-            cursor: pointer;
+            margin-top: 30px;
+            padding: 12px 30px;
             background: #fccf05;
+            color: black;
             border: none;
+            border-radius: 50px;
             font-weight: bold;
-            color: #121212;
-            border-radius: 30px;
-            transition: transform 0.2s, background 0.2s;
-            font-size: 1rem;
-            margin-top: 20px;
+            cursor: pointer;
+            transition: 0.3s;
         }
+
         .boton-moderno:hover {
-            background: #ffdb33;
             transform: scale(1.1);
+            background: #ffdb33;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Hola, soy Diego Salazar</h1>
-        <p>Aprendiz de programador y futuro experto.</p>
-    </header>
+    <div class="contenedor-principal">
+        <header>
+            <h1>Hola, soy Diego Salazar</h1>
+            <p>Aprendiz de programador y futuro experto.</p>
+        </header>
 
-    <section>
-        <h2>Mis metas para este año:</h2>
-        <ul>
-            <li>Dominar HTML y CSS</li>
-            <li>Subir mi primer proyecto a GitHub</li>
-            <li>Aprender a pensar como programador</li>
-        </ul>
-    </section>
-
-    <button id="miBoton" class="boton-moderno">
-        ¡Haz clic aquí!
-    </button>
+        <button id="miBoton" class="boton-moderno">
+            ¡Haz clic aquí!
+        </button>
+    </div>
 
     <script>
         const boton = document.getElementById('miBoton');
         boton.addEventListener('click', function() {
-            alert('¡Sigue así, Diego! Ya eres un programador con una web en vivo 🚀');
+            alert('¡Sigue así, Diego! Tu web se ve increíble ahora 🚀');
         });
     </script>
 
